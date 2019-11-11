@@ -1,13 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Oswald:400,600|Sacramento|Source+Sans+Pro:300&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Just+Me+Again+Down+Here|Roboto:100,700&display=swap');
 
 /* Variables */
 
 $color-light: #fff;
 $color-dark: #444;
+$color-black: #000000;
 
-$font-logo: 'Sacramento', cursive;
-$font-header: 'Oswald', sans-serif;
-$font-text: 'Source Sans Pro', sans-serif;
+$font-logo: 'Just Me Again Down Here', cursive;
+$font-header: 'Roboto 700', sans-serif;
+$font-text: 'Roboto 100', sans-serif;
 
 /* Global */
 
@@ -22,6 +24,8 @@ body {
   font-weight: 300;
   font-size: 16px;
   line-height: 1.7;
+  padding: 0;
+  margin: 0;
 }
 
 .container {
@@ -43,17 +47,31 @@ body {
 
 /* Layout */
 
+.blog {
+  background-image: url("../images/background.png");
+  background-size: cover;
+  height: auto;
+  margin: 0;
+  padding: 0 0 50px 0;
+}
+
 .wrapper {
   display: flex;
   margin-left: 10px;
-}
-
-.sidebar {
-  flex: 1 0 0;
+  .sidebar {
+    background-color: $color-light;
+    opacity: 0.82;
+    flex: 1 0 0;
+    .section-title {
+      color: $color-black;
+    }
+  }
 }
 
 .posts {
   flex: 2 0 0;
+  background-color: $color-light;
+  opacity: 0.82;
 }
 
 .sidebar, .posts {
@@ -67,11 +85,15 @@ body {
 /* Logo */
 
 .logo {
-  font-family: $font-logo;
-  font-weight: 400;
-  font-size: 104px;
-  line-height: 1;
   text-align: center;
+  margin-top: 0;
+  padding: 400px 0 23px 0;
+  color: $color-black;
+  font-family: $font-logo;
+  font-size: 154px;
+  font-weight: 400;
+  line-height: 37.7px;
+  letter-spacing: 12.3px;
 }
 
 /* Lists */
@@ -80,8 +102,15 @@ body {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  a {
+    color: $color-dark;
+  }
+  a:link {
+    text-decoration: none;
+  }
   .active {
     font-weight: bold;
+    color: $color-black;
   }
 }
 
@@ -94,8 +123,17 @@ body {
 /* Authors */
 
 .authors {
+  display: flex;
+  flex-wrap: wrap;
   li {
+    width: 50%;
+    flex: 1 1 auto;
     margin-bottom: 12px;
+    border: 1 px solid black;
+    text-align: center;
+    span {
+      color: $color-black;
+    }
   }
 }
 
@@ -106,15 +144,23 @@ body {
   &.active {
     display: block;
   }
-}
-
-.post-author {
-  font-style: italic;
-}
-
-.post-tags {
-  display: flex;
-  p {
-    margin: 0 10px 0 0;
+  .post-title {
+    color: $color-black;
+  }
+  .post-author {
+    font-style: italic;
+  }
+  .post-tags {
+    display: flex;
+    p {
+      margin: 0 10px 0 0;
+      color: $color-black;
+    }
+    a {
+      color: $color-black;
+    }
+    .active {
+      font-weight: bold;
+    }
   }
 }
