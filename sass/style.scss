@@ -50,6 +50,7 @@ body {
 .blog {
   background-image: url("../images/background.png");
   background-size: cover;
+  background-position-y: 45%;
   height: auto;
   margin: 0;
   padding: 0 0 50px 0;
@@ -87,7 +88,7 @@ body {
 .logo {
   text-align: center;
   margin-top: 0;
-  padding: 400px 0 23px 0;
+  padding: 120px 0 30px 0;
   color: $color-black;
   font-family: $font-logo;
   font-size: 154px;
@@ -125,13 +126,22 @@ body {
 .authors {
   display: flex;
   flex-wrap: wrap;
+  padding-top: 10px;
   li {
     width: 50%;
     flex: 1 1 auto;
     margin-bottom: 12px;
     text-align: center;
+    img {
+      max-width: 60%;
+    }
     span {
+      display: block;
+      width: 100%;
       color: $color-black;
+      font-size: 13px;
+      margin: 0;
+      padding: 0;
     }
   }
 }
@@ -145,6 +155,7 @@ body {
   }
   .post-title {
     color: $color-black;
+    font-size: 24px;
   }
   .post-author {
     font-style: italic;
