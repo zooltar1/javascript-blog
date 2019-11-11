@@ -126,7 +126,6 @@ body {
   -ms-flex: 1 1 auto;
       flex: 1 1 auto;
   margin-bottom: 12px;
-  border: 1 px solid black;
   text-align: center;
 }
 
