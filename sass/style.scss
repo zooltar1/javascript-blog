@@ -38,6 +38,7 @@ body {
   text-transform: uppercase;
   font-family: $font-header;
   font-weight: 600;
+
   span {
     text-transform: none;
     font-weight: 400;
@@ -59,10 +60,12 @@ body {
 .wrapper {
   display: flex;
   margin-left: 10px;
+
   .sidebar {
     background-color: $color-light;
     opacity: 0.82;
     flex: 1 0 0;
+
     .section-title {
       color: $color-black;
     }
@@ -103,12 +106,15 @@ body {
   list-style-type: none;
   margin: 0;
   padding: 0;
+
   a {
     color: $color-dark;
   }
+
   a:link {
     text-decoration: none;
   }
+
   .active {
     font-weight: bold;
     color: $color-black;
@@ -127,14 +133,17 @@ body {
   display: flex;
   flex-wrap: wrap;
   padding-top: 10px;
+
   li {
     width: 50%;
     flex: 1 1 auto;
     margin-bottom: 12px;
     text-align: center;
+
     img {
       max-width: 60%;
     }
+
     span {
       display: block;
       width: 100%;
@@ -150,25 +159,32 @@ body {
 
 .post {
   display: none;
+
   &.active {
     display: block;
   }
+
   .post-title {
     color: $color-black;
     font-size: 24px;
   }
+
   .post-author {
     font-style: italic;
   }
+
   .post-tags {
     display: flex;
+
     p {
       margin: 0 10px 0 0;
       color: $color-black;
     }
+
     a {
       color: $color-black;
     }
+
     .active {
       font-weight: bold;
     }
