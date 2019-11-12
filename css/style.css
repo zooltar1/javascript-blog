@@ -39,8 +39,8 @@ body {
 .blog {
   background-image: url("../images/background.png");
   background-size: cover;
-  background-position-y: 45%;
-  height: auto;
+  background-position-y: 60%;
+  height: 120vh;
   margin: 0;
   padding: 0 0 50px 0;
 }
@@ -178,9 +178,5 @@ body {
 
 .post .post-tags .active {
   font-weight: bold;
-}
-
-.post .post-tags .post-content p {
-  font-size: 30px;
 }
 /*# sourceMappingURL=style.css.map */
