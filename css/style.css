@@ -40,7 +40,7 @@ body {
   background-image: url("../images/background.png");
   background-size: cover;
   background-position-y: 60%;
-  height: 120vh;
+  height: 1200px;
   margin: 0;
   padding: 0 0 50px 0;
 }
