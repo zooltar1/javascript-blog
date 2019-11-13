@@ -24,7 +24,7 @@ const titleClickHandler = function(event){
 
   /* [DONE] get 'href' attribute from the clicked link */
 
-  articleSelector = clickedElement.getAttribute('href');
+  const articleSelector = clickedElement.getAttribute('href');
 
   /* [DONE] find the correct article using the selector (value of 'href' attribute) */
 
@@ -87,6 +87,7 @@ function generateTitleLinks(){
 
 generateTitleLinks();
 
+
 function generateTags(){
 
   /* [DONE] find all articles */
@@ -126,15 +127,17 @@ function generateTags(){
       html = html + linkHTML;
       console.log(html);
 
-    }
+      /* END LOOP: for each tag */
 
-    /* END LOOP: for each tag */
+    }
 
     /* [IN PROGRESS] insert HTML of all the links into the tags wrapper */
 
+    const tagList = article.querySelector(optArticleTagsSelector);
+    tagList.innerHTML = html;
 
+    /* END LOOP: for every article: */
 
-  /* END LOOP: for every article: */
   }
 
 }
