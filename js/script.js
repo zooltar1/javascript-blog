@@ -2,9 +2,7 @@ const titleClickHandler = function(event){
   event.preventDefault();
   const clickedElement = this,
     activeLinks = document.querySelectorAll('.titles a.active'),
-    activeArticles = document.querySelectorAll('.posts article.active'),
-    articleSelector = clickedElement.getAttribute('href'),
-    targetArticle = document.querySelector(articleSelector);
+    activeArticles = document.querySelectorAll('.posts article.active');
 
   console.log('Link was clicked!');
 
@@ -26,11 +24,11 @@ const titleClickHandler = function(event){
 
   /* [DONE] get 'href' attribute from the clicked link */
 
-  console.log(articleSelector);
+  articleSelector = clickedElement.getAttribute('href');
 
   /* [DONE] find the correct article using the selector (value of 'href' attribute) */
 
-  console.log(targetArticle);
+  const targetArticle = document.querySelector(articleSelector);
 
   /* [DONE] add class 'active' to the correct article */
 
@@ -70,7 +68,6 @@ function generateTitleLinks(){
     /* [DONE] create HTML of the link */
 
     const linkHTML = '<li><a href="#' + articleId + '"><span>' + articleTitle + '</span></a></li>';
-    console.log(linkHTML);
 
     /* [DONE] insert link into html variable */
 
@@ -81,7 +78,6 @@ function generateTitleLinks(){
   titleList.innerHTML = html;
 
   const links = document.querySelectorAll('.titles a');
-  console.log(links);
 
   for(let link of links){
     link.addEventListener('click', titleClickHandler);
@@ -136,7 +132,7 @@ function generateTags(){
 
     /* [IN PROGRESS] insert HTML of all the links into the tags wrapper */
 
-    optArticleTagsSelector.innerHTML = html;  - nie wiem gdzie mam tutaj błąd że nie wyświetla tagów
+
 
   /* END LOOP: for every article: */
   }
