@@ -162,7 +162,7 @@ function tagClickHandler(event){
 
   /* [DONE] find all tag links with class active */
 
-  const tags = tag.querySelectorAll('a.active[href^="#tag-"]');
+  const tags = document.querySelectorAll('a.active[href^="#tag-"]');
 
   /* [DONE] START LOOP: for each active tag link */
 
@@ -198,13 +198,22 @@ function tagClickHandler(event){
 }
 
 function addClickListenersToTags(){
-  /* find all links to tags */
 
-  /* START LOOP: for each link */
+  /* [DONE] find all links to tags */
 
-    /* add tagClickHandler as event listener for that link */
+  const allLinks = document.querySelectorAll('a[href^="#tag-"]');
 
-  /* END LOOP: for each link */
+  /* [DONE] START LOOP: for each link */
+
+  for(let allLink of allLinks){
+
+    /* [DONE] add tagClickHandler as event listener for that link */
+
+    allLink.addEventListener('click', tagClickHandler);
+
+  }
+
+  /* [DONE] END LOOP: for each link */
 }
 
 addClickListenersToTags();
