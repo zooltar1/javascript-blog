@@ -125,7 +125,7 @@ function generateTags(){
 
       /* [DONE] generate HTML of the link */
 
-      const linkHTML = '<li><a href="#tag-' + tag + '">' + tag + '</a></li>,  ';
+      const linkHTML = '<li><a href="#tag-' + tag + '">' + tag + '</a></li>';
 
       /* [DONE] add generated code to html variable */
 
@@ -264,3 +264,79 @@ function generateAuthors(){
 }
 
 generateAuthors();
+
+function authorClickHandler(event){
+
+  /* [DONE] prevent default action for this event */
+
+  event.preventDefault();
+
+  /* [DONE] make new constant named "clickedElement" and give it the value of "this" */
+
+  const clickedElement = this;
+
+  /* [DONE] make a new constant "href" and read the attribute "href" of the clicked element */
+
+  const href = clickedElement.getAttribute('href');
+
+  /* [DONE] make a new constant "author" and extract author from the "href" constant */
+
+  const author = href.replace('#author-', '');
+
+  /* [DONE] find all author links with class active */
+
+  const authors = document.querySelectorAll('a.active[href^="#author-"]');
+
+  /* [DONE] START LOOP: for each active author link */
+
+  for(let activeAuthor of authors){
+
+    /* [DONE] remove class active */
+
+    activeAuthor.classList.remove('active');
+
+  }
+
+  /* [DONE] END LOOP: for each active author link */
+
+  /* [DONE] find all author links with "href" attribute equal to the "href" constant */
+
+  const authorsConstant = document.querySelectorAll('a[href="' + href + '"]');
+
+  /* [DONE] START LOOP: for each found author link */
+
+  for(let authorConstant of authorsConstant){
+
+    /* [DONE] add class active */
+
+    authorConstant.classList.add('active');
+
+  }
+  /* [DONE] END LOOP: for each found author link */
+
+  /* [DONE] execute function "generateTitleLinks" with article selector as argument */
+
+  generateTitleLinks('[data-author="' + author + '"]');
+
+}
+
+function addClickListenersToAuthors(){
+
+  /* [DONE] find all links to authors */
+
+  const allLinks = document.querySelectorAll('a[href^="#author-"]');
+
+  /* [DONE] START LOOP: for each link */
+
+  for(let allLink of allLinks){
+
+    /* [DONE] add authorClickHandler as event listener for that link */
+
+    allLink.addEventListener('click', authorClickHandler);
+
+  }
+
+  /* [DONE] END LOOP: for each link */
+}
+
+addClickListenersToAuthors();
