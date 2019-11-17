@@ -62,6 +62,36 @@ body {
   color: #000000;
 }
 
+.wrapper .sidebar .tags li {
+  display: inline-block;
+  padding-right: 5px;
+}
+
+.wrapper .sidebar .tags .tag-size-1 {
+  font-size: 100%;
+  color: green;
+}
+
+.wrapper .sidebar .tags .tag-size-2 {
+  font-size: 140%;
+  color: darkgreen;
+}
+
+.wrapper .sidebar .tags .tag-size-3 {
+  font-size: 180%;
+  color: red;
+}
+
+.wrapper .sidebar .tags .tag-size-4 {
+  font-size: 200%;
+  color: chocolate;
+}
+
+.wrapper .sidebar .tags .tag-size-5 {
+  font-size: 240%;
+  color: blue;
+}
+
 .posts {
   -ms-flex: 2 0 0px;
       flex: 2 0 0;
@@ -178,5 +208,9 @@ body {
 
 .post .post-tags .active {
   font-weight: bold;
+}
+
+.post .post-tags li {
+  padding-right: 5px;
 }
 /*# sourceMappingURL=style.css.map */
