@@ -3,7 +3,9 @@ const optArticleSelector = '.post',
   optTitleListSelector = '.titles',
   optArticleTagsSelector = '.post-tags .list',
   optArticleAuthorSelector = '.post-author',
+  // eslint-disable-next-line no-unused-vars
   optTagsListSelector = '.list .tags',
+  // eslint-disable-next-line no-unused-vars
   optAuthorListSelector = '.list .authors',
   optCloudClassCount = 5,
   optCloudClassPrefix = 'tag-size-';
@@ -198,8 +200,8 @@ function generateTags(){
   /* [NEW DONE] find list of tags in right column */
 
   const tagList = document.querySelector('.tags'),
-  tagsParams = calculateTagsParams(allTags);
-  console.log('tagsParams:', tagsParams)
+    tagsParams = calculateTagsParams(allTags);
+
 
 
   /* [NEW DONE] create variable for all links HTML code */
@@ -375,7 +377,7 @@ function generateAuthors(){
 
     /* [NEW DONE] generate code of a link and add it to allAuthorsHTML */
 
-    const authorLinkHTML = '<li><a href="#author-' + author + '">' + author + '</a></li>';
+    const authorLinkHTML = '<li><a href="#author-' + author + '">' + author + ' (' + allAuthors[author] + ') </a></li>';
     console.log('authorlinkHTML:', authorLinkHTML);
 
     allAuthorsHTML += authorLinkHTML;
